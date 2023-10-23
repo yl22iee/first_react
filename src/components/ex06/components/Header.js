@@ -4,7 +4,7 @@ const SHeader = styled.header`
   padding: 20px 15%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 `;
 
 const Logo = styled.h3`
