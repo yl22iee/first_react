@@ -5,12 +5,24 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { styled } from "styled-components";
+
+const FontHeader = styled.header`
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+`;
 
 export const IconEx = () => {
   return (
     <div>
-      <FontAwesomeIcon icon={faCircleArrowDown} style={{ fontSize: "20px" }} />
-      <FontAwesomeIcon icon={faBars} style={{ fontSize: "20px" }} />
+      <FontHeader>
+        <FontAwesomeIcon
+          icon={faCircleArrowDown}
+          style={{ fontSize: "30px" }}
+        />
+        <FontAwesomeIcon icon={faBars} style={{ fontSize: "30px" }} />
+      </FontHeader>
     </div>
   );
 };

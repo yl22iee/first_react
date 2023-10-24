@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { IconEx } from "./IconEx";
+import { IconNum } from "./IconNum";
 
 const Wrap = styled.section`
   max-width: 450px;
@@ -12,10 +13,10 @@ const Wrap = styled.section`
 `;
 
 const WHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   /* border: 1px solid #eee; */
-  padding: 30px;
+  /* padding: 30px; */
 `;
 
 const MenuBtn = styled.div``;
@@ -58,7 +59,10 @@ export const MusicApp = () => {
             <div>Blue</div>
             <div>hello</div>
           </Title>
-          <Arrow></Arrow>
+
+          <Arrow>
+            <IconNum />
+          </Arrow>
         </WSection>
       </Wrap>
     </div>
