@@ -54,6 +54,7 @@ const MenuWrap = styled.ul`
 export const EventPr = () => {
   const [Left, setLeft] = useState(0);
   const [Num, setNum] = useState(0);
+
   const ClickBtn = () => {
     if (Num === 0) {
       setLeft("0%");
@@ -69,9 +70,9 @@ export const EventPr = () => {
       <Wrap>
         <MHeader>
           <Logo>logo</Logo>
-          <MenuBtn>=</MenuBtn>
+          <MenuBtn onClick={ClickBtn}>=</MenuBtn>
 
-          <MenuWrap $HandleLeft={Left} onClick={ClickBtn}>
+          <MenuWrap $HandleLeft={Left}>
             <li>menu</li>
             <li>menu</li>
             <li>menu</li>

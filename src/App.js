@@ -2,7 +2,9 @@
 // import MapFnEx from "./components/ex04/MapFnEx";
 // import { ViewSiteEx } from "./components/ex04/ViewSiteEx";
 
-import { PraEx } from "./PracticeEX/components/PraEx";
+import { Ex09 } from "./components/ex09/Ex09";
+
+// import { PraEx } from "./PracticeEX/components/PraEx";
 
 // import { MainP } from "./PracticeEX/components/MainP";
 // import { Ex07 } from "./components/ex07/Ex07";
@@ -34,7 +36,10 @@ const App = () => {
 
       {/* 6일차 */}
       {/* <Ex07 /> */}
-      <PraEx />
+      {/* <PraEx /> */}
+
+      {/* 7일차 */}
+      <Ex09 />
     </div>
   );
 };
