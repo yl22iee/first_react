@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
 import { colors } from "../../../GlobalStyled";
 import { MenuHeader } from "./MenuHeader";
+import { useState } from "react";
 
 const Wrap = styled.div`
   height: 100vh;
@@ -25,6 +26,7 @@ const Container = styled.div`
   width: 100%;
   background-color: ${colors.darkGray};
   padding: 50px 20px;
+  position: relative;
 `;
 
 const Header = styled.div`
@@ -108,6 +110,24 @@ const BtnWrap = styled.ul`
   }
 `;
 
+const MenuWrap = styled.ul`
+  position: absolute;
+  top: 0;
+  /* left: ${(props) => props.$isActive} */
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30% 0%;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+`;
+
 const UserCon = styled.div`
   padding: 20px;
   border-radius: 50px;
@@ -143,20 +163,35 @@ const MenuBtn = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  z-index: 10;
 `;
 
 export const MusicApp = () => {
+  const [leftResult, setLeftResult] = useState("100%");
+
+  const onClickMenu = () => {
+    leftResult === "100%" ? setLeftResult(0) : setLeftResult("100%");
+   }
+  };
+
   return (
     <div>
       <Wrap>
         <Container>
           <Header>
-            <MoreBtn>
+            <MoreBtn onClick={onClickMenu}>
               <FontAwesomeIcon icon={faCaretDown} />
             </MoreBtn>
             <MenuBtn>
               <FontAwesomeIcon icon={faBars} />
             </MenuBtn>
+
+            <MenuWrap $isActive={setLeftResult}>
+              <li>menu</li>
+              <li>menu</li>
+              <li>menu</li>
+              <li>menu</li>
+            </MenuWrap>
           </Header>
 
           <Cover>

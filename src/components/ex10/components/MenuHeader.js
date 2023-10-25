@@ -29,6 +29,15 @@ const MenuBtn = styled.div`
   border-radius: 50%;
 `;
 
+const MenuWrap = styled.ul`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+`;
+
 export const MenuHeader = () => {
   return (
     <Header>
@@ -38,6 +47,13 @@ export const MenuHeader = () => {
       <MenuBtn>
         <FontAwesomeIcon icon={faBars} />
       </MenuBtn>
+
+      <MenuWrap>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+      </MenuWrap>
     </Header>
   );
 };
