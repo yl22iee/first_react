@@ -17,13 +17,13 @@ const WHeader = styled.header`
   /* justify-content: space-between; */
   /* border: 1px solid #eee; */
   /* padding: 30px; */
+  cursor: pointer;
 `;
 
 const MenuBtn = styled.div``;
 
 const WSection = styled.div`
   height: 660px;
-  /* border: 1px solid #eee; */
 `;
 
 const Bg = styled.div`
@@ -32,6 +32,7 @@ const Bg = styled.div`
   border-radius: 20px;
   margin: 20px;
   background-color: #dbdbdb;
+  background-image: url(${(props) => props.$Link});
 `;
 
 const Title = styled.div`
@@ -41,7 +42,9 @@ const Title = styled.div`
   align-items: center;
 `;
 
-const Arrow = styled.div``;
+const Arrow = styled.div`
+  cursor: pointer;
+`;
 
 export const MusicApp = () => {
   return (
@@ -54,7 +57,7 @@ export const MusicApp = () => {
         </WHeader>
 
         <WSection>
-          <Bg></Bg>
+          <Bg $Link="https://img.freepik.com/premium-photo/abstract-black-textured-background-with-scratches_130265-12474.jpg"></Bg>
           <Title>
             <div>Blue</div>
             <div>hello</div>

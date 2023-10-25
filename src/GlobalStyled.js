@@ -20,4 +20,8 @@ export const GlobalStyled = createGlobalStyle`
         font-family: 'Noto Sans KR', sans-serif;
     }
 `;
+
+export const colors = {
+  darkGray: "#1d1d1d",
+};
 // 전체 영역에서 사용할 수 있는 스타일 처리법

@@ -9,11 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
 
 const MenuWrap = styled.div`
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  background-color: lightgray;
 `;
 
 export const IconNum = () => {
