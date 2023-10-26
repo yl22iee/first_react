@@ -1,21 +1,5 @@
-// import { IntroEx } from "./components/ex04/IntroEx";
-// import MapFnEx from "./components/ex04/MapFnEx";
-// import { ViewSiteEx } from "./components/ex04/ViewSiteEx";
-
 import { Ex10 } from "./components/ex10/Ex10";
-
-// import { Ex09 } from "./components/ex09/Ex09";
-
-// import { PraEx } from "./PracticeEX/components/PraEx";
-
-// import { MainP } from "./PracticeEX/components/MainP";
-// import { Ex07 } from "./components/ex07/Ex07";
-
-// import { Ex06 } from "./components/ex06/Ex06";
-
-// import { Props } from "./PracticeEX/Props";
-
-// import { Ex05 } from "./components/ex05/Ex05";
+import { Ex11 } from "./components/ex11/Ex11";
 
 const App = () => {
   return (
@@ -44,7 +28,10 @@ const App = () => {
       {/* <Ex09 /> */}
 
       {/* 8일차 */}
-      <Ex10 />
+      {/* <Ex10 /> */}
+
+      {/* 9일차 */}
+      <Ex11 />
     </div>
   );
 };

@@ -10,7 +10,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
 import { colors } from "../../../GlobalStyled";
-import { MenuHeader } from "./MenuHeader";
 import { useState } from "react";
 
 const Wrap = styled.div`
@@ -113,7 +112,7 @@ const BtnWrap = styled.ul`
 const MenuWrap = styled.ul`
   position: absolute;
   top: 0;
-  /* left: ${(props) => props.$isActive} */
+  left: ${(props) => props.$isActive};
   width: 100%;
   height: 100%;
   background-color: lightgray;
@@ -123,8 +122,8 @@ const MenuWrap = styled.ul`
   padding: 30% 0%;
   flex-direction: column;
   font-weight: 900;
-  font-size: 30px;
-  color: white;
+  font-size: 50px;
+  color: #dbdbdb;
   text-transform: uppercase;
 `;
 
@@ -171,7 +170,6 @@ export const MusicApp = () => {
 
   const onClickMenu = () => {
     leftResult === "100%" ? setLeftResult(0) : setLeftResult("100%");
-   }
   };
 
   return (
