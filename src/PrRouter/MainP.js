@@ -40,25 +40,11 @@ const Box = styled.div`
   padding: 50px;
 `;
 
-const Boxone = styled.div`
-  width: 450px;
+const Con = styled.ul`
+  width: 40%;
   height: 400px;
-  background-color: lightblue;
-  background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-guillaume-meurice-1591447.jpg&fm=jpg);
-  box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
-  &:hover {
-    transform: translate(20px, 20px);
-    box-shadow: none;
-  }
-`;
-
-const Boxtwo = styled.div`
-  width: 450px;
-  height: 400px;
-  background-color: lightblue;
-  background-image: url(https://images.unsplash.com/photo-1631631480669-535cc43f2327?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww);
-  box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.3);
+  background-color: #eee;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
   &:hover {
     transform: translate(20px, 20px);
@@ -84,12 +70,12 @@ export const MainP = () => {
 
         <BoxWrap>
           <Box>
-            <Boxone>
-              <Link to={"/sub01"}></Link>
-            </Boxone>
-            <Boxtwo>
-              <Link to={"/sub02"}></Link>
-            </Boxtwo>
+            <Con>
+              <Link to={"/Sub01"}></Link>
+            </Con>
+            <Con>
+              <Link to={"/Sub02"}></Link>
+            </Con>
           </Box>
         </BoxWrap>
       </Wrap>
