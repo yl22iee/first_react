@@ -72,10 +72,10 @@ export const MainP = () => {
         <BoxWrap>
           <Box>
             <Con $url={data[0].img}>
-              <Link to={"/Sub01"}></Link>
+              <Link to={"/Sub/0"}></Link>
             </Con>
             <Con $url={data[1].img}>
-              <Link to={"/Sub02"}></Link>
+              <Link to={"/Sub/1"}></Link>
             </Con>
           </Box>
         </BoxWrap>
