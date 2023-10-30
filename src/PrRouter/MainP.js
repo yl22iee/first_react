@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { data } from "./Api";
 
 const Wrap = styled.div`
   height: 100vh;
@@ -43,7 +44,7 @@ const Box = styled.div`
 const Con = styled.ul`
   width: 40%;
   height: 400px;
-  background-color: #eee;
+  background: url(${(props) => props.$url});
   box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
   &:hover {
@@ -70,10 +71,10 @@ export const MainP = () => {
 
         <BoxWrap>
           <Box>
-            <Con>
+            <Con $url={data[0].img}>
               <Link to={"/Sub01"}></Link>
             </Con>
-            <Con>
+            <Con $url={data[1].img}>
               <Link to={"/Sub02"}></Link>
             </Con>
           </Box>

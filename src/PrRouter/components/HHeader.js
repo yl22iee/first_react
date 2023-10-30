@@ -33,10 +33,10 @@ export const HHeader = () => {
 
         <MenuWrap>
           <li>
-            <Link to={"sub01"}>Sub_Page01</Link>
+            <Link to={"/sub/0"}>Sub_Page01</Link>
           </li>
           <li>
-            <Link to={"sub02"}>Sub_Page02</Link>
+            <Link to={"/sub/1"}>Sub_Page02</Link>
           </li>
         </MenuWrap>
       </HELLOheader>
