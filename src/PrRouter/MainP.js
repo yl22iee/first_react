@@ -10,7 +10,7 @@ const MainTitle = styled.div`
   height: 50vh;
   display: flex;
   justify-content: center;
-  background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHx8fDE2OTgxNjg2MzZ8MA&ixlib=rb-4.0.3);
+  background-color: lightgray;
   align-items: center;
   flex-direction: column;
   h2 {
@@ -62,7 +62,6 @@ const Con = styled.ul`
 export const MainP = () => {
   return (
     <div>
-      <hr />
       <Wrap>
         <MainTitle>
           <h2>REACT</h2>

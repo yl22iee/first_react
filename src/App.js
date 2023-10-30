@@ -1,3 +1,4 @@
+import { PrMain } from "./PrPage/PrMain";
 import { PrRouter } from "./PrRouter/PrRouter";
 import { Ex10 } from "./components/ex10/Ex10";
 import { Ex11 } from "./components/ex11/Ex11";
@@ -35,6 +36,8 @@ const App = () => {
       {/* <Ex11 /> */}
 
       <PrRouter />
+
+      {/* <PrMain /> */}
     </div>
   );
 };
