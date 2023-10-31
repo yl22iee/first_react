@@ -2,6 +2,7 @@ import { PrMain } from "./PrPage/PrMain";
 import { PrRouter } from "./PrRouter/PrRouter";
 import { Ex10 } from "./components/ex10/Ex10";
 import { Ex11 } from "./components/ex11/Ex11";
+import { Ex14 } from "./components/ex14/Ex14";
 
 const App = () => {
   return (
@@ -35,7 +36,10 @@ const App = () => {
       {/* 9일차 */}
       {/* <Ex11 /> */}
 
-      <PrRouter />
+      {/* <PrRouter /> */}
+
+      {/* 10일차 */}
+      <Ex14 />
 
       {/* <PrMain /> */}
     </div>
