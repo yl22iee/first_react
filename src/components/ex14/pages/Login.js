@@ -52,16 +52,23 @@ const Button = styled.button`
   font-size: 18px;
   font-weight: 600;
   color: white;
+  opacity: ${(props) =>
+    props.$isActive ? 1 : 0.5}; // => 참이라면 1 거짓이람녀 0.5;
+  cursor: ${(props) => (props.isValid ? "pointer" : "default")};
 `;
 
 export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { errors, isValid },
+  } = useForm({
+    mode: "onChange", // 실시간으로 errors, isValid를 반응시킨다.
+  });
 
   console.log(errors?.username?.message);
+  //   console.log(isValid); => 유효성 겁사 후 boolean값으로 반환합니다.
+
   //   &&연산자로 객체에 접근한는것 보다 옵셔널 체이닝()을 이용하여 객체 안에 있는 객체를 쉽게 접근할 수 있음
   // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
@@ -87,14 +94,41 @@ export const Login = () => {
 
         <Input
           {...register("password", {
-            required: true,
+            required: "password는 필수입니다.",
+            minLength: {
+              value: 8,
+              message: "password는 8자리 이상 작성",
+            },
+            pattern:
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/,
+            message:
+              "최소 8 자 및 최대 10 자, 하나 이상의 대문자, 하나의 소문자, 하나의 숫자 및 하나의 특수 문자 ",
           })}
           type="text"
           placeholder="PassWord"
         />
+        <span>{errors?.password?.message}</span>
 
-        <Button>Login</Button>
+        <Button $isActive={isValid}>Login</Button>
       </Form>
     </Wrap>
   );
 };
+
+// useForm
+// => form 관련 패키지
+// ex)
+// const {register, => input 태그 name 및 등럭 약힐
+// handleSubmit, => form태그 이벤트 등록
+// formState:{errors, isValid} => form 상태를 관리
+// => errors: form 유효성 검사 후 에러를 객체로 반환함,
+// => isValid : form 상태가 유효한지 boolean값으로 반환
+// }= useForm({
+// mode:"onChange"  -> form 모드로 유효성 검사를 어떻게 처리할지 값은 작성 할 수 있음
+// });
+
+{
+  /* <inpit {...register("name명",{ */
+}
+// required: "" // 현 input값이 필수값인지 아닌지 boolean값 및 문자열로 작성 가능
+// })} />
