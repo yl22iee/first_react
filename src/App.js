@@ -1,10 +1,11 @@
-import { PrMain } from "./PrPage/PrMain";
-import { PrRouter } from "./PrRouter/PrRouter";
-import { Ex10 } from "./components/ex10/Ex10";
-import { Ex11 } from "./components/ex11/Ex11";
-import { Ex14 } from "./components/ex14/Ex14";
-import { MainPage } from "./components/ex14/MainPage";
-import { Routers } from "./components/ex14/Routers";
+// import { PrMain } from "./PrPage/PrMain";
+// import { PrRouter } from "./PrRouter/PrRouter";
+// import { Ex10 } from "./components/ex10/Ex10";
+// import { Ex11 } from "./components/ex11/Ex11";
+// import { Ex14 } from "./components/ex14/Ex14";
+// import { MainPage } from "./components/ex14/MainPage";
+// import { Routers } from "./components/ex14/Routers";
+import { Ex16 } from "./components/ex16/Ex16";
 
 const App = () => {
   return (
@@ -38,12 +39,16 @@ const App = () => {
       {/* 9일차 */}
       {/* <Ex11 /> */}
 
-      <PrRouter />
+      {/* <PrRouter /> */}
 
       {/* 10일차 */}
       {/* <Ex14 /> */}
+      {/* <Routers /> */}
 
       {/* <PrMain /> */}
+
+      {/* 14일차 */}
+      <Ex16 />
     </div>
   );
 };

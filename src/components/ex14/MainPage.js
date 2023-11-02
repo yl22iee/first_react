@@ -6,28 +6,21 @@ const Wrap = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const MenuWrap = styled.ul`
   background-color: lightgray;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
-const Con = styled.div``;
+const ConWrap = styled.ul`
+  background-color: lightgray;
+`;
+
+const Con = styled.li``;
 
 export const MainPage = () => {
   return (
     <Wrap>
-      <MenuWrap>
-        <Con>
-          <Link to={"/login"}>Login</Link>
-        </Con>
-        <Con>
-          <Link to={"/signup"}>SignUP</Link>
-        </Con>
-      </MenuWrap>
+      <ConWrap>
+        <Con></Con>
+      </ConWrap>
     </Wrap>
   );
 };
